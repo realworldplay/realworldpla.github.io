@@ -1,0 +1,38 @@
+# main links
+  # - title: "About"
+  #   url: https://mmistakes.github.io/minimal-mistakes/about/
+  # - title: "Sample Posts"
+  #   url: /year-archive/
+  # - title: "Sample Collections"
+  #   url: /collection-archive/
+  # - title: "Sitemap"
+  #   url: /sitemap/
+
+main:
+  - title: "홈"
+    url: /
+
+  - title: "한국사 아카이브"
+    url: /history/
+    children:
+      - title: "조선시대"
+        url: /history/joseon/
+      - title: "자료실"
+        url: /history/resources/
+
+  - title: "연성 노트"
+    url: /fandom/
+    children:
+      - title: "연성"
+        url: /fandom/characters/
+      - title: "세계관 설정"
+        url: /fandom/worldbuilding/
+      - title: "갤러리"
+        url: /fandom/gallery/
+
+  - title: "뉴스레터"
+    url: "https://maily.so/sayeon"  # 여기에 실제 뉴스레터 URL
+    external: true
+
+  - title: "소개"
+    url: /about/
