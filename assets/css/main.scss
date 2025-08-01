@@ -1,0 +1,116 @@
+---
+# Only the main Sass file needs front matter
+search: false
+---
+
+@charset "utf-8";
+
+// Minimal Mistakes 기본 스타일 불러오기
+@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+@import "minimal-mistakes";
+
+/* ===========================
+   1. 공통 스타일 (기본 PC 스타일)
+=========================== */
+
+/* 제목 스타일 */
+.page__title,
+.page__title h1,
+.page__content h1,
+.page__content h2 {
+  border-bottom: none !important; /* 밑줄 제거 */
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-weight: 700 !important;
+  margin-bottom: 0.75rem;
+}
+
+.page__content h3 {
+  font-family: 'Noto Sans KR', sans-serif !important;
+  font-weight: 600 !important;
+}
+
+/* 본문 폰트 */
+body {
+  font-family: 'Noto Serif KR', serif !important;
+  font-size: 16px !important;
+  line-height: 1.7 !important;
+  color: #333 !important;
+  overflow-x: hidden !important; /* 가로 스크롤 방지 */
+}
+
+/* ===========================
+   2. 태블릿 반응형 (769px ~ 1024px)
+=========================== */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .page__title,
+  .page__title h1,
+  .page__content h1 {
+    font-size: 1.6rem !important;
+  }
+
+  .page__content h2 {
+    font-size: 1.4rem !important;
+  }
+
+  .page__content h3 {
+    font-size: 1.2rem !important;
+  }
+
+  body {
+    font-size: 15px !important;
+    line-height: 1.65 !important;
+  }
+}
+
+/* ===========================
+   3. 모바일 반응형 (768px 이하)
+=========================== */
+@media (max-width: 768px) {
+  .page__title,
+  .page__title h1,
+  .page__content h1 {
+    font-size: 1.4rem !important;
+  }
+
+  .page__content h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .page__content h3 {
+    font-size: 1.15rem !important;
+  }
+
+  body {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+  }
+
+  .page {
+    padding-left: 1rem !important;
+    padding-right: 1rem !important;
+  }
+
+  .masthead,
+  .greedy-nav {
+    padding: 0 10px !important;
+  }
+}
+
+
+/* 카테고리 링크 및 제목 링크 밑줄 제거 */
+.page__meta a,
+.page__taxonomy a,
+.page__title a,
+.archive__item-title a,
+a {
+  text-decoration: none !important;
+}
+
+/* 링크 hover 시 밑줄도 제거 */
+.page__meta a:hover,
+.page__taxonomy a:hover,
+.page__title a:hover,
+.archive__item-title a:hover,
+a:hover {
+  text-decoration: none !important;
+}
